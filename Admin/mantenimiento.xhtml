@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Productos</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- link use in xhml -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" xmlns="http://www.w3.org/1999/xhtml"> -->
+</h:head>
+<style>
+    .header-title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+</style>
+
+<h:body>
+    <div>
+        <div class="header-title">
+            <h1 style="margin-right: 10px;">Lista de Productos</h1>
+            <button type="button" class="btn btn-info" data-bs-toggle="modal"
+                data-bs-target="#registrarProducto">Registrar producto</button>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <!-- descripcion, marca, precio, proveedor, imagen -->
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Tamano</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Proveedor</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Detalle</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Codigo 1</td>
+                    <td>Colocar Imagen</td>
+                    <td>Leche Gloria</td>
+                    <td>Grande</td>
+                    <td>50</td>
+                    <td>S/. 9.00</td>
+                    <td>Grupo Proveedor Gloria</td>
+                    <td>Grupo Gloria</td>
+                    <td>Detalle producto lacteo</td>
+                    <td>
+                        <button type="button" class="btn btn-success"><i class="fa-solid fa-circle-plus"></i>
+                            Editar</button>
+                        <button type="button" class="btn btn-danger"><i class="fa-solid fa-circle-xmark"></i>
+                            Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <!-- Registrar producto -->
+    <div class="modal fade" id="registrarProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Registro de Producto</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="codigo" class="form-label">Codigo</label>
+                            <input type="text" class="form-control" id="codigo" placeholder="Codigo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="tamano" class="form-label">Tamano</label>
+                            <input type="text" class="form-control" id="tamano" placeholder="Tamano">
+                        </div>
+                        <div class="mb-3">
+                            <label for="stock" class="form-label">Stock</label>
+                            <input type="text" class="form-control" id="stock" placeholder="Stock">
+                        </div>
+                        <div class="mb-3">
+                            <label for="precio" class="form-label">Precio</label>
+                            <input type="text" class="form-control" id="precio" placeholder="Precio">
+                        </div>
+                        <div class="mb-3">
+                            <label for="proveedor" class="form-label">Proveedor</label>
+                            <input type="text" class="form-control" id="proveedor" placeholder="Proveedor">
+                        </div>
+                        <div class="mb-3">
+                            <label for="marca" class="form-label">Marca</label>
+                            <input type="text" class="form-control" id="marca" placeholder="Marca">
+                        </div>
+                        <div class="mb-3">
+                            <label for="detalle" class="form-label">Detalle</label>
+                            <input type="text" class="form-control" id="detalle" placeholder="Detalle">
+                        </div>
+                        <div class="mb-3">
+                            <label for="imagen" class="form-label">Imagen</label>
+                            <input type="file" class="form-control" id="imagen" placeholder="Imagen">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</h:body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+
+</html>
