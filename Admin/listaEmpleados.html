@@ -15,16 +15,30 @@
     <style>
         .header-title {
             display: flex;
-            justify-content: flex-start;
+            justify-content: space-around;
             align-items: center;
         }
     </style>
     <body>
         <div>
+            <!-- <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Index</a></li>
+                    <li class="breadcrumb-item"><a href="#">Empleados</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Productos</li>
+                </ol>
+            </nav> -->
+
             <div class="header-title">
                 <h1 style="margin-right: 10px;">Lista de Empleados</h1>
                 <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#registrarProducto">Registrar producto</button>
+                    <div class="btn-group">
+                        <a href="/index.html" class="btn btn-primary">Index</a>
+                        <a href="#" class="btn btn-primary active" aria-current="page">Empleados</a>
+                        <a href="listaProductos.html" class="btn btn-primary">Productos</a>
+                    </div>
             </div>
+                
             <table class="table table-bordered">
                 <thead>
                     <tr>

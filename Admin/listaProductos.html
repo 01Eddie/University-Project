@@ -14,9 +14,9 @@
 </head>
 <style>
     .header-title {
-            display: flex;
-    justify-content: flex-start;
-    align-items: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 </style>
 <body>
@@ -24,6 +24,11 @@
         <div class="header-title">
             <h1 style="margin-right: 10px;">Lista de Productos</h1>
             <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#registrarProducto">Registrar producto</button>
+            <div class="btn-group">
+                <a href="/index.html" class="btn btn-primary">Index</a>
+                <a href="listaEmpleados.html" class="btn btn-primary">Empleados</a>
+                <a href="#" class="btn btn-primary active" aria-current="page">Productos</a>
+            </div>
         </div>
         <table class="table table-bordered">
             <thead>
